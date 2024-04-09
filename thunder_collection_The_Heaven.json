@@ -1,0 +1,201 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "The_Heaven",
+    "dateExported": "2024-04-09T03:02:03.784Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "35a7d4cd-a727-4c55-b041-f07e1a5cb565",
+            "name": "Client",
+            "containerId": "",
+            "created": "2024-04-08T22:28:31.091Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2024-04-08T22:28:41.558Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "517941ee-9296-4cae-8dff-7d65cc474cc5",
+            "name": "Global",
+            "containerId": "",
+            "created": "2024-04-08T22:29:18.838Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "bd45a02f-e4cf-4ca0-83fd-4b6a9f7a34c6",
+            "name": "User",
+            "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "created": "2024-04-08T22:32:04.834Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "0ad4b737-12ac-43bf-9016-d58bece6dfc9",
+            "name": "User",
+            "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
+            "created": "2024-04-08T22:41:46.921Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "8579d3c2-fbf4-415c-a554-e4992617aa48",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "",
+            "name": "createUser",
+            "url": "createUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-08T22:06:10.714Z",
+            "modified": "2024-04-09T02:10:57.171Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Weslly"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Cabrera"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Des101"
+                    },
+                    {
+                        "name": "email",
+                        "value": "wcabrera-2022060@kinal.edu.gt101"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    },
+                    {
+                        "name": "role",
+                        "value": "ADMIN",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "92b0f061-c96f-4764-b106-bb92f3f680eb",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "",
+            "name": "login",
+            "url": "login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-08T22:17:52.698Z",
+            "modified": "2024-04-09T02:36:17.176Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "Des10"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb26899d-84f1-4d76-aec2-1ddf03cabe34",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "bd45a02f-e4cf-4ca0-83fd-4b6a9f7a34c6",
+            "name": "getUser",
+            "url": "getUser/66146c5287ddd7349eef52ef",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-04-08T22:32:14.694Z",
+            "modified": "2024-04-08T22:32:41.882Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b45ecd82-d042-478a-a77a-83c4b7234ad4",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "bd45a02f-e4cf-4ca0-83fd-4b6a9f7a34c6",
+            "name": "getUsers",
+            "url": "getUsers",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-04-08T22:40:08.408Z",
+            "modified": "2024-04-08T22:40:14.948Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f29a98ba-b335-402e-ab3e-dd135ceb07d2",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "0ad4b737-12ac-43bf-9016-d58bece6dfc9",
+            "name": "updateUser",
+            "url": "updateUser/6614a3b1c0afdd1eeb699ae5",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-04-08T22:41:57.552Z",
+            "modified": "2024-04-09T02:32:51.866Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Alexander"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Morales"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Des12"
+                    },
+                    {
+                        "name": "email",
+                        "value": "amorales@gmail.com12"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "dd0b0b59-1e6a-4fe3-ab9e-0c18ab5ffb1a",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "0ad4b737-12ac-43bf-9016-d58bece6dfc9",
+            "name": "deleteUser",
+            "url": "deleteUser/6614a2d5e385243d999e4933",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-04-09T02:35:43.067Z",
+            "modified": "2024-04-09T02:36:41.361Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:3000/"
+        }
+    }
+}
