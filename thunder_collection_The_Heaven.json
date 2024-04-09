@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "The_Heaven",
-    "dateExported": "2024-04-09T04:02:12.690Z",
+    "dateExported": "2024-04-09T06:43:03.696Z",
     "version": "1.1",
     "folders": [
         {
@@ -45,6 +45,20 @@
             "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
             "created": "2024-04-09T03:48:10.588Z",
             "sortNum": 60000
+        },
+        {
+            "_id": "0a46585a-39b4-48d9-8950-b9e1af50ed1e",
+            "name": "Room",
+            "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "created": "2024-04-09T06:34:09.635Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "b20cfcdf-d2ca-4c5a-8b98-93e79c3944b3",
+            "name": "Room",
+            "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
+            "created": "2024-04-09T06:39:07.972Z",
+            "sortNum": 80000
         }
     ],
     "requests": [
@@ -327,6 +341,111 @@
             "modified": "2024-04-09T04:01:25.794Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a7f0a488-9cd4-439e-9b78-38e09d6f957c",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "0a46585a-39b4-48d9-8950-b9e1af50ed1e",
+            "name": "createRoom",
+            "url": "createRoom",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-04-09T06:34:26.253Z",
+            "modified": "2024-04-09T06:38:04.892Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "type",
+                        "value": "VIP"
+                    },
+                    {
+                        "name": "price",
+                        "value": "100"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Una habitacion lujosa para máximo 4 personas"
+                    },
+                    {
+                        "name": "aviability",
+                        "value": "true",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "hotel",
+                        "value": "6614bb7aaff0a32d3b0b9d86"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "21b950b9-c3a4-4598-ad84-3e139b26817c",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "b20cfcdf-d2ca-4c5a-8b98-93e79c3944b3",
+            "name": "getRooms",
+            "url": "getRooms",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-04-09T06:39:14.337Z",
+            "modified": "2024-04-09T06:39:35.853Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d6fc25a4-c15e-4bb5-ba9a-cec47632ca29",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "b20cfcdf-d2ca-4c5a-8b98-93e79c3944b3",
+            "name": "getRoom",
+            "url": "getRoom/6614e29f621d31cf6532c7cc",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2024-04-09T06:39:49.371Z",
+            "modified": "2024-04-09T06:40:32.585Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "936f0ecf-895a-441a-bb53-2a710ae83898",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "0a46585a-39b4-48d9-8950-b9e1af50ed1e",
+            "name": "updateRoom",
+            "url": "updateRoom/6614e29f621d31cf6532c7cc",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2024-04-09T06:40:44.212Z",
+            "modified": "2024-04-09T06:41:58.439Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "type",
+                        "value": "FAMILY"
+                    },
+                    {
+                        "name": "price",
+                        "value": "5000"
+                    },
+                    {
+                        "name": "aviability",
+                        "value": "false"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Ya no esta disponible"
+                    }
+                ]
+            },
             "tests": []
         }
     ],
