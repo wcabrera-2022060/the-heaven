@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "The_Heaven",
-    "dateExported": "2024-04-09T03:02:03.784Z",
+    "dateExported": "2024-04-09T04:02:12.690Z",
     "version": "1.1",
     "folders": [
         {
@@ -38,6 +38,13 @@
             "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
             "created": "2024-04-08T22:41:46.921Z",
             "sortNum": 50000
+        },
+        {
+            "_id": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "Hotel",
+            "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "created": "2024-04-09T03:48:10.588Z",
+            "sortNum": 60000
         }
     ],
     "requests": [
@@ -95,7 +102,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-04-08T22:17:52.698Z",
-            "modified": "2024-04-09T02:36:17.176Z",
+            "modified": "2024-04-09T03:50:59.551Z",
             "headers": [],
             "params": [],
             "body": {
@@ -104,7 +111,7 @@
                 "form": [
                     {
                         "name": "username",
-                        "value": "Des10"
+                        "value": "Des"
                     },
                     {
                         "name": "password",
@@ -188,6 +195,136 @@
             "sortNum": 80000,
             "created": "2024-04-09T02:35:43.067Z",
             "modified": "2024-04-09T02:36:41.361Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4b7fa030-430b-4288-b9e6-02660966de45",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "createHotel",
+            "url": "createHotel",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-04-09T03:48:17.616Z",
+            "modified": "2024-04-09T03:56:36.597Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "The Westin Camino Real"
+                    },
+                    {
+                        "name": "country",
+                        "value": "Guatemala"
+                    },
+                    {
+                        "name": "city",
+                        "value": "Guatemala"
+                    },
+                    {
+                        "name": "address",
+                        "value": "14 Calle 0-20"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Hotel 5 estrellas todo incluido"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a48877db-4d1d-4999-bd8c-5e214827f1f0",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "getHotels",
+            "url": "getHotels",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-04-09T03:53:07.179Z",
+            "modified": "2024-04-09T03:53:15.117Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a36d4e95-81c1-4897-b59f-a7f0c3341e85",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "getHotel",
+            "url": "getHotel/6614bb80aff0a32d3b0b9d8c",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-04-09T03:56:58.632Z",
+            "modified": "2024-04-09T03:57:49.150Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2a6afe8f-16e4-447a-9d7a-f3ad3029a6a5",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "updateHotel",
+            "url": "updateHotel/6614bb80aff0a32d3b0b9d8c",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2024-04-09T03:58:04.245Z",
+            "modified": "2024-04-09T03:59:45.894Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Hilton Guatemala City"
+                    },
+                    {
+                        "name": "country",
+                        "value": "España"
+                    },
+                    {
+                        "name": "city",
+                        "value": "Barcelona"
+                    },
+                    {
+                        "name": "address",
+                        "value": "10-89 zona 14"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "44556564"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Hotel en españa"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "da4e8cd9-7099-4fdd-a040-292897c20657",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
+            "name": "deleteUser",
+            "url": "deleteHotel/6614bb80aff0a32d3b0b9d8c",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2024-04-09T04:00:26.754Z",
+            "modified": "2024-04-09T04:01:25.794Z",
             "headers": [],
             "params": [],
             "tests": []
