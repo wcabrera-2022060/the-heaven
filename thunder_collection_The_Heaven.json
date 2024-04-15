@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "The_Heaven",
-    "dateExported": "2024-04-09T06:43:03.696Z",
+    "dateExported": "2024-04-15T07:53:36.766Z",
     "version": "1.1",
     "folders": [
         {
@@ -59,6 +59,13 @@
             "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
             "created": "2024-04-09T06:39:07.972Z",
             "sortNum": 80000
+        },
+        {
+            "_id": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "Rating",
+            "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
+            "created": "2024-04-15T00:39:33.611Z",
+            "sortNum": 90000
         }
     ],
     "requests": [
@@ -446,6 +453,108 @@
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "8e22abdc-de8b-44bb-920b-9e788faa73e9",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "createRating",
+            "url": "createRating",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2024-04-15T00:39:44.202Z",
+            "modified": "2024-04-15T01:23:42.102Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "hotel",
+                        "value": "6614bb7aaff0a32d3b0b9d86"
+                    },
+                    {
+                        "name": "comment",
+                        "value": "Pésimo servicio"
+                    },
+                    {
+                        "name": "stars",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e0e3d0f3-4289-482d-878e-fe5b74431bd4",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "getRatings",
+            "url": "getRatings",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2024-04-15T00:56:43.791Z",
+            "modified": "2024-04-15T00:56:50.989Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d4a133f5-9fdc-4529-b902-b5eb82095332",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "getRating",
+            "url": "getRating/661c811bdc1fd8adcf3376f7",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2024-04-15T01:22:30.605Z",
+            "modified": "2024-04-15T01:23:00.073Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "75ff69d5-7ae1-4d6f-860a-394c07a52a04",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "updateRating",
+            "url": "updateRating/661c811bdc1fd8adcf3376f7",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2024-04-15T01:24:27.766Z",
+            "modified": "2024-04-15T07:53:11.156Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "comment",
+                        "value": "Sin comentarios por ahora"
+                    },
+                    {
+                        "name": "stars",
+                        "value": "24"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0253eab3-a4b2-48a9-babc-178290a1a0ea",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "1b16a55d-e546-488f-b7c2-294e527313fa",
+            "name": "deleteRating",
+            "url": "deleteRating/661c8191dc1fd8adcf337709",
+            "method": "DELETE",
+            "sortNum": 220000,
+            "created": "2024-04-15T07:46:50.161Z",
+            "modified": "2024-04-15T07:47:52.748Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ],
