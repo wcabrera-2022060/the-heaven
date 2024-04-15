@@ -11,7 +11,6 @@ export const createHotel = async (req, res) => {
         await hotel.save()
         return res.send({ message: 'Hotel created successfully', hotel })
     } catch (error) {
-        console.error(error)
         return res.status(500).send({ message: 'Error creating hotel' })
     }
 }
