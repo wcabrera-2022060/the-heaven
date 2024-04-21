@@ -10,6 +10,7 @@ import userRoutes from '../src/user/user.routes.js'
 import hotelRoutes from '../src/hotel/hotel.routes.js'
 import roomRoutes from '../src/room/room.routes.js'
 import ratingRoutes from '../src/rating/rating.routes.js'
+import reservationRoutes from '../src/reservation/reservation.routes.js'
 
 const app = express()
 config()
@@ -26,6 +27,7 @@ app.use(userRoutes)
 app.use(hotelRoutes)
 app.use(roomRoutes)
 app.use(ratingRoutes)
+app.use(reservationRoutes)
 
 export const initServer = () => {
     app.listen(port, () => { console.log(`Server listen in port ${port}`) })
