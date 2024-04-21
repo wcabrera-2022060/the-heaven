@@ -1,8 +1,9 @@
 {
-    "client": "Thunder Client",
+    "clientName": "Thunder Client",
     "collectionName": "The_Heaven",
-    "dateExported": "2024-04-15T08:09:27.301Z",
-    "version": "1.1",
+    "collectionId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+    "dateExported": "2024-04-21T07:06:57.304Z",
+    "version": "1.2",
     "folders": [
         {
             "_id": "35a7d4cd-a727-4c55-b041-f07e1a5cb565",
@@ -73,6 +74,27 @@
             "containerId": "517941ee-9296-4cae-8dff-7d65cc474cc5",
             "created": "2024-04-15T08:09:09.023Z",
             "sortNum": 100000
+        },
+        {
+            "_id": "f3cfa9c5-ef5c-4e57-af23-48763edc105b",
+            "name": "Reservation",
+            "containerId": "35a7d4cd-a727-4c55-b041-f07e1a5cb565",
+            "created": "2024-04-20T22:50:01.935Z",
+            "sortNum": 110000
+        },
+        {
+            "_id": "96b93e0e-2707-4798-8855-98665c1f3edb",
+            "name": "Reservation",
+            "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "created": "2024-04-20T22:59:02.264Z",
+            "sortNum": 120000
+        },
+        {
+            "_id": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "Event",
+            "containerId": "45581cf3-f197-47bd-b1f3-1fcba0987c23",
+            "created": "2024-04-21T05:01:10.949Z",
+            "sortNum": 130000
         }
     ],
     "requests": [
@@ -144,24 +166,22 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-04-08T22:17:52.698Z",
-            "modified": "2024-04-09T03:50:59.551Z",
+            "modified": "2024-04-21T06:51:52.331Z",
             "headers": [],
-            "params": [],
             "body": {
                 "type": "formencoded",
                 "raw": "",
                 "form": [
                     {
                         "name": "username",
-                        "value": "Des"
+                        "value": "Des1"
                     },
                     {
                         "name": "password",
                         "value": "123"
                     }
                 ]
-            },
-            "tests": []
+            }
         },
         {
             "_id": "a36d4e95-81c1-4897-b59f-a7f0c3341e85",
@@ -347,7 +367,7 @@
             "_id": "da4e8cd9-7099-4fdd-a040-292897c20657",
             "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
             "containerId": "3bcc367d-a301-4aa4-a46e-18c5c29cd44a",
-            "name": "deleteUser",
+            "name": "deleteHotel",
             "url": "deleteHotel/6614bb80aff0a32d3b0b9d8c",
             "method": "DELETE",
             "sortNum": 130000,
@@ -563,11 +583,263 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "101cd446-4122-4fbf-8ab0-d7a671d63fc5",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "f3cfa9c5-ef5c-4e57-af23-48763edc105b",
+            "name": "createReservation",
+            "url": "createReservation",
+            "method": "POST",
+            "sortNum": 230000,
+            "created": "2024-04-20T22:50:37.136Z",
+            "modified": "2024-04-20T23:31:09.585Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "room",
+                        "value": "6614e29f621d31cf6532c7cc"
+                    },
+                    {
+                        "name": "numberAdults",
+                        "value": "6"
+                    },
+                    {
+                        "name": "numberKids",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "numberRooms",
+                        "value": "1"
+                    },
+                    {
+                        "name": "dateIn",
+                        "value": "2024-04-20"
+                    },
+                    {
+                        "name": "dateOut",
+                        "value": "2024-04-25"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "a644df7d-2b58-4f8e-9cb2-a79148d6a9f4",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "96b93e0e-2707-4798-8855-98665c1f3edb",
+            "name": "getReservations",
+            "url": "getReservations",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2024-04-20T22:59:12.560Z",
+            "modified": "2024-04-20T22:59:20.050Z",
+            "headers": []
+        },
+        {
+            "_id": "b3b7b10e-d2ff-456f-b6bd-67918f3336ed",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "96b93e0e-2707-4798-8855-98665c1f3edb",
+            "name": "getReservation",
+            "url": "getReservation/66244fcb0efd5bc0fb5cd0aa",
+            "method": "POST",
+            "sortNum": 250000,
+            "created": "2024-04-20T23:09:08.581Z",
+            "modified": "2024-04-20T23:30:14.227Z",
+            "headers": []
+        },
+        {
+            "_id": "f57f2467-45a7-4e30-85ec-3b1ce1eab9cd",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "f3cfa9c5-ef5c-4e57-af23-48763edc105b",
+            "name": "updateReservation",
+            "url": "updateReservation/66244fcb0efd5bc0fb5cd0aa",
+            "method": "PUT",
+            "sortNum": 260000,
+            "created": "2024-04-20T23:11:52.092Z",
+            "modified": "2024-04-21T06:51:32.657Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "room",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "numberAdults",
+                        "value": "1"
+                    },
+                    {
+                        "name": "numberKids",
+                        "value": "2"
+                    },
+                    {
+                        "name": "numberRooms",
+                        "value": "1"
+                    },
+                    {
+                        "name": "dateIn",
+                        "value": "2024-04-22"
+                    },
+                    {
+                        "name": "dateOut",
+                        "value": "2024-04-28"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "e707e037-e78d-41df-9c21-0658ba503d1c",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "f3cfa9c5-ef5c-4e57-af23-48763edc105b",
+            "name": "deleteReservation",
+            "url": "deleteReservation/66244ec547bb6afc80bbdb0d",
+            "method": "DELETE",
+            "sortNum": 270000,
+            "created": "2024-04-21T00:14:54.447Z",
+            "modified": "2024-04-21T00:32:06.561Z",
+            "headers": []
+        },
+        {
+            "_id": "fe9a4112-5b80-44e4-bdaf-d80c3a79807a",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "createEvent",
+            "url": "createEvent",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2024-04-21T05:01:17.073Z",
+            "modified": "2024-04-21T05:05:36.614Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "user",
+                        "value": "66146c5287ddd7349eef52ef"
+                    },
+                    {
+                        "name": "hotel",
+                        "value": "6614bb7aaff0a32d3b0b9d86"
+                    },
+                    {
+                        "name": "date",
+                        "value": "2024-05-10"
+                    },
+                    {
+                        "name": "type",
+                        "value": "Cumpleaños"
+                    },
+                    {
+                        "name": "guests",
+                        "value": "20"
+                    },
+                    {
+                        "name": "price",
+                        "value": "17500"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "13049a1d-8f85-4c42-ae4b-8ed004cf04b6",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "getEvents",
+            "url": "getEvents",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2024-04-21T05:05:47.596Z",
+            "modified": "2024-04-21T05:05:52.440Z",
+            "headers": []
+        },
+        {
+            "_id": "2a1b006f-ab6f-467f-b435-6ed51d328ef7",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "getEvent",
+            "url": "getEvent/66249e91bce2385a37ac9a46",
+            "method": "POST",
+            "sortNum": 310000,
+            "created": "2024-04-21T05:06:01.724Z",
+            "modified": "2024-04-21T05:06:21.758Z",
+            "headers": []
+        },
+        {
+            "_id": "8fe2c3af-4d8f-4e87-8323-a055651b9737",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "updateEvent",
+            "url": "updateEvent/66249e91bce2385a37ac9a46",
+            "method": "PUT",
+            "sortNum": 320000,
+            "created": "2024-04-21T05:12:18.672Z",
+            "modified": "2024-04-21T06:51:59.977Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "hotel",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "date",
+                        "value": "2024-05-10"
+                    },
+                    {
+                        "name": "type",
+                        "value": "Boda"
+                    },
+                    {
+                        "name": "guests",
+                        "value": "60"
+                    },
+                    {
+                        "name": "price",
+                        "value": "125000"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "14f67b54-e697-4c45-97f3-926c79cff4e0",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "ae12c44c-139a-4123-a14e-c2e6801943e9",
+            "name": "deleteEvent",
+            "url": "deleteEvent/66249e4e57320d0e94f9a2cd",
+            "method": "DELETE",
+            "sortNum": 330000,
+            "created": "2024-04-21T06:52:34.790Z",
+            "modified": "2024-04-21T06:54:00.072Z",
+            "headers": []
+        },
+        {
+            "_id": "e80d926f-5f11-4fea-a12b-a12b1d49ffc0",
+            "colId": "110aab9d-6384-4797-ba7b-7d37e7e5ddda",
+            "containerId": "0a46585a-39b4-48d9-8950-b9e1af50ed1e",
+            "name": "deleteRoom",
+            "url": "deleteRoom/6614e29e621d31cf6532c7c8",
+            "method": "DELETE",
+            "sortNum": 340000,
+            "created": "2024-04-21T07:04:56.757Z",
+            "modified": "2024-04-21T07:05:23.107Z",
+            "headers": []
         }
     ],
     "settings": {
         "options": {
             "baseUrl": "http://localhost:3000/"
         }
-    }
+    },
+    "ref": "yrBKhk5wnhzLNb_K4dFyDTDg-o_x7u00arWHexg1UrvRi6AmO2bl4BDDcDRKezJ2f0gdQOEhzNJMNDwBu9wv5w"
 }
