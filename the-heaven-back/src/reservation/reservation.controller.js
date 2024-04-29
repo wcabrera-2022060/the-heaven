@@ -50,6 +50,7 @@ export const updateReservation = async (req, res) => {
         let { id } = req.params
         let data = req.body
         let {_id} = req.user
+        //!validar bien esto
         if (data.room) {
             let room = await Room.findById({ _id: data.room })
             if (!room) return res.status(404).send({ message: 'Room not found' })
