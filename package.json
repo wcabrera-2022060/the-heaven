@@ -1,0 +1,31 @@
+{
+  "name": "the-heaven",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A centralized web application inspired by Trivago for hotel management, offering comprehensive functionalities for hotel, room, and event management",
+  "workspaces": [
+    "the-heaven-back",
+    "the-heaven-front"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:front": "cd the-heaven-front && npm run dev",
+    "dev:back": "cd the-heaven-back && npm run dev",
+    "start": "npm-run-all --parallel dev:back dev:front"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcabrera-2022060/the-heaven.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wcabrera-2022060/the-heaven/issues"
+  },
+  "homepage": "https://github.com/wcabrera-2022060/the-heaven#readme",
+  "keywords": [],
+  "author": "Bug Busters",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
