@@ -32,7 +32,16 @@ const reservationSchema = Schema({
     dateOut: {
         type: Date,
         required: true
-    }
+    },
+    services: [{
+        service: {
+            type: Schema.ObjectId,
+            ref: 'Service'
+        },
+        quantity: {
+            type: Number
+        }
+    }]
 }, {
     versionKey: false
 })
