@@ -1,13 +1,8 @@
 'use strict'
 
-import { Schema, model } from "mongoose"
+import { Schema, model } from 'mongoose'
 
 const serviceSchema = Schema({
-    reservation: {
-        type: Schema.ObjectId,
-        ref: 'Reservation',
-        required: true
-    },
     type: {
         type: String,
         required: true
@@ -20,9 +15,10 @@ const serviceSchema = Schema({
         type: Number,
         required: true
     },
-    quantity: {
-        type: Number,
-        required: true
+    available: {
+        type: Boolean,
+        required: true,
+        default: true
     }
 }, {
     versionKey: false
