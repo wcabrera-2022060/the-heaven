@@ -1,0 +1,36 @@
+.outstanding {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.outstandingImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10000;
+}
+
+.outstandingItem {
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+    flex: 1;
+}
+
+.outstandingTitles {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.countries h1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    margin-left: -700px;
+}
