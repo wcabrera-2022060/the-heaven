@@ -5,7 +5,6 @@ import CardHotel2 from '../../img/Hotel6.jpg'
 import CardHotel3 from '../../img/Hotel7.jpg'
 import CardHotel4 from '../../img/Hotel8.jpg'
 import { Link } from 'react-router-dom'
-import { Hotel } from '../../pages/hotel/Hotel'
 
 export const SearchItem = () => {
     return (
@@ -44,7 +43,7 @@ export const SearchItem = () => {
                     <div className="sIDetailTexts">
                         <span className="sIPrice">$722</span>
                         <span className="sIOpIVA">Includes IVA</span>
-                        <Link to={Hotel}>
+                        <Link to="The-Westin-Camino-Real">
                             <button className="sICheckButton">
                                 See availability
                                 <i className="fa-solid fa-chevron-right"></i>
