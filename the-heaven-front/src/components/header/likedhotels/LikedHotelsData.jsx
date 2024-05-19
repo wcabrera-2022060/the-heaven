@@ -1,7 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './LikedHotels.css'
 
 function LikedHotelsData(props) {
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate(props.link)
+    }
+
     return (
         <div className="i-card">
             <div className="i-image">
@@ -26,7 +33,9 @@ function LikedHotelsData(props) {
                     <p className="price">Price: {props.price}</p>
                 </div>
             </div>
-            <button className="btnC">{props.btn}</button>
+            <button className="btnC" onClick={handleClick}>
+                {props.btn}
+            </button>
         </div>
     )
 }

@@ -40,6 +40,7 @@ export function LikedHotels() {
                     price="$200"
                     rating="5.0"
                     comment="1659 comments"
+                    link="/hotels/westin-camino-real"
                 />
                 <LikedHotelsData
                     image={Card2}
@@ -49,6 +50,7 @@ export function LikedHotels() {
                     price="$300"
                     rating="4.5"
                     comment="1050 comments"
+                    link="/details/intercontinental-real"
                 />
                 <LikedHotelsData
                     image={Card3}
@@ -58,6 +60,7 @@ export function LikedHotels() {
                     price="$400"
                     rating="4.9"
                     comment="1750 comments"
+                    link="/details/gran-melia-iguazu"
                 />
                 <LikedHotelsData
                     image={Card4}
@@ -67,6 +70,7 @@ export function LikedHotels() {
                     price="$250"
                     rating="3.9"
                     comment="850 comments"
+                    link="/h/palacio-duhau"
                 />
             </Slider>
         </div>
