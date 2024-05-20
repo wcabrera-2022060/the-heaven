@@ -58,7 +58,10 @@ export const LoginRegister = () => {
             </style>
             <div className={`wrapper${action}`}>
                 <div className="form-box login">
-                    <form onSubmit={handleSubmitLogin(onSubmitLogin)}>
+                    <form
+                        className="lform"
+                        onSubmit={handleSubmitLogin(onSubmitLogin)}
+                    >
                         <h1>Login</h1>
                         <div className="input-box">
                             <input

@@ -108,29 +108,29 @@ export const Reservation = () => {
         <>
             <Navbar />
             <div className="container">
-                <div class="formR-container">
-                    <form class="formRe-form">
-                        <div class="form-group">
+                <div className="formR-container">
+                    <form className="formRe-form">
+                        <div className="form-group">
                             <label>Hotel</label>
                             <input type="text" />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Room</label>
                             <input type="text" />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Number of Room</label>
                             <input type="date" />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Number of Adults</label>
                             <input type="date" />
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Number of Children</label>
                             <input type="text" />
                         </div>
