@@ -4,6 +4,7 @@ import { Footer } from '../../components/header/footer/Footer'
 import { Navbar } from '../../components/navbar/Navbar'
 import './Hotel.css'
 import { LikedHotels } from '../../components/header/likedhotels/LikedHotels'
+import { Link } from 'react-router-dom'
 
 export const Hotel = () => {
     const [slideNumber, setSlideNumber] = useState(0)
@@ -75,9 +76,11 @@ export const Hotel = () => {
                         </div>
                     )}
                     <div className="hotelWrapper">
-                        <button className="reserve">
-                            Reserve or Book Now!
-                        </button>
+                        <Link to="Reservation">
+                            <button className="reserve">
+                                Reserve or Book Now!
+                            </button>
+                        </Link>
                         <h1 className="hotelTitle">The Westin Camino Real</h1>
                         <div className="hotelAddress">
                             <i className="fa-solid fa-location-dot"></i>

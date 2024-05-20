@@ -6,6 +6,7 @@ import { Hotel } from './pages/hotel/Hotel'
 import { LoginRegister } from './pages/LoginRegistration/LoginRegister'
 import { ParticlesComponent } from '../src/components/particles/Particlesbg'
 import { Toaster } from 'react-hot-toast'
+import { Reservation } from './components/reservation/Reservation'
 
 function App() {
     return (
@@ -14,6 +15,10 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/hotels" element={<ListH />}></Route>
                 <Route path="/hotels/:id" element={<Hotel />}></Route>
+                <Route
+                    path="/hotels/:id/Reservation"
+                    element={<Reservation />}
+                ></Route>
                 <Route
                     path="/signin"
                     element={
