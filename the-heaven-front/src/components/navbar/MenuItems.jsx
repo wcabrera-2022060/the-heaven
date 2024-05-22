@@ -17,6 +17,7 @@ export const MenuItems = [
         cName: 'nav-links',
         icon: 'fa-solid fa-briefcase',
     },
+
     {
         title: 'Sign in',
         url: '/signin',

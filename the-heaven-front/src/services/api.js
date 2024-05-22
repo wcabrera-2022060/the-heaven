@@ -5,6 +5,17 @@ const apiUrl = axios.create({
   timeout: 5000
 })
 
+apiUrl.interceptors.request.use(
+  config => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      config.headers.Authorization = token
+    }
+    return config
+  },
+  err => Promise.reject(err)
+)
+
 export const registerRequest = async (data) => {
   try {
     return await apiUrl.post('createUser', data)
@@ -19,6 +30,104 @@ export const registerRequest = async (data) => {
 export const loginRequest = async (data) => {
   try {
     return await apiUrl.post('login', data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+///CRUD HOTEL
+//agregar
+export const saveHotelRequest = async (hotel) => {
+  try {
+    return await apiUrl.post('/createHotel', hotel)
+  } catch (error) {
+    return {
+      error: true,
+      err
+    }
+  }
+}
+
+//listar
+export const getHotelsRequest = async () => {
+  try {
+    return await apiUrl.get('getHotels')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateHotelRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateHotel/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteHotelRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteHotel/${id}`)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+///CRUD ROOM
+//agregar
+export const saveRoomRequest = async (room) => {
+  try {
+    return await apiUrl.post('/createRoom', room)
+  } catch (error) {
+    return {
+      error: true,
+      err
+    }
+  }
+}
+
+//listar
+export const getRoomsRequest = async () => {
+  try {
+    return await apiUrl.get('getRooms')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateRoomRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateRoom/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteRoomRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteRoom/${id}`)
   } catch (error) {
     return {
       err: true,

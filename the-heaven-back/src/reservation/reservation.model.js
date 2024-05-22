@@ -3,9 +3,14 @@
 import { Schema, model } from 'mongoose'
 
 const reservationSchema = Schema({
-    hotel: {
+    room: {
         type: Schema.ObjectId,
-        ref: 'Hotel',
+        ref: 'Room',
+        required: true
+    },
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User',
         required: true
     },
     numberAdults: {
@@ -28,10 +33,15 @@ const reservationSchema = Schema({
         type: Date,
         required: true
     },
-    telefono: {
-        type: Number,
-        required: true
-    },
+    services: [{
+        service: {
+            type: Schema.ObjectId,
+            ref: 'Service'
+        },
+        quantity: {
+            type: Number
+        }
+    }]
 }, {
     versionKey: false
 })

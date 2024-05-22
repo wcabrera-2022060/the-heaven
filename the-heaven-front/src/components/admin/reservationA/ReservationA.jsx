@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import './Reservation.css'
-import { Navbar } from '../navbar/Navbar'
-import { Footer } from '../header/footer/Footer'
+import './ReservationA.css'
+import { NavbarA } from '../navbarA/NavbarA'
 
-export const Reservation = () => {
+export const ReservationA = () => {
     const [data, setData] = useState([
         {
             reservation: 'The Westin Camino Real',
@@ -106,7 +105,7 @@ export const Reservation = () => {
 
     return (
         <>
-            <Navbar />
+            <NavbarA />
             <div className="container">
                 <div className="formR-container">
                     <form className="formRe-form">
@@ -226,7 +225,6 @@ export const Reservation = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }
