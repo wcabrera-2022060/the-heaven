@@ -3,11 +3,15 @@ import './CreateReservation.css';
 import { Navbar } from '../navbar/Navbar.jsx';
 import { Footer } from '../header/footer/Footer.jsx';
 import { useReservationAdmin } from '../../hooks/useReservationAdmin.jsx';
+import { useUserAdmin } from '../../hooks/useUserAdmin.jsx';
+import { useRoomAdmin } from '../../hooks/useRoomAdmin.jsx';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
 export const CreateReservation = () => {
+    const { getUsers, users } = useUserAdmin();
+    const { getRooms, rooms } = useRoomAdmin();
     const { getReservations, reservations, isLoading, addReservation, updateReservation, deleteReservation } = useReservationAdmin();
     const [reservation, setReservation] = useState({
         room: '',
@@ -24,6 +28,8 @@ export const CreateReservation = () => {
 
     useEffect(() => {
         getReservations();
+        getUsers();
+        getRooms();
     }, []);
 
     const [sortConfig, setSortConfig] = useState({
@@ -121,6 +127,16 @@ export const CreateReservation = () => {
         setIsEditing(false);
     };
 
+    const getUserNameById = (id) => {
+        const user = users.find(user => user._id === id);
+        return user ? user.name : 'Unknown';
+    };
+
+    const getRoomTypeById = (id) => {
+        const room = rooms.find(room => room._id === id);
+        return room ? room.type : 'Unknown';
+    };
+
     return (
         <>
             <Navbar />
@@ -129,12 +145,22 @@ export const CreateReservation = () => {
                     <form className="formRe-form" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label>Room</label>
-                            <input type="text" value={reservation.room} onChange={(e) => setReservation({ ...reservation, room: e.target.value })} required />
+                            <select value={reservation.room} onChange={(e) => setReservation({ ...reservation, room: e.target.value })} required>
+                                <option value="">Seleccione el tipo de room</option>
+                                {rooms.map((room) => (
+                                    <option key={room._id} value={room._id}>{room.type}</option>
+                                ))}
+                            </select>
                         </div>
 
                         <div className="form-group">
                             <label>User</label>
-                            <input type="text" value={reservation.user} onChange={(e) => setReservation({ ...reservation, user: e.target.value })} required />
+                            <select value={reservation.user} onChange={(e) => setReservation({ ...reservation, user: e.target.value })} required>
+                                <option value="">Seleccione el usuario</option>
+                                {users.map((user) => (
+                                    <option key={user._id} value={user._id}>{user.name}</option>
+                                ))}
+                            </select>
                         </div>
 
                         <div className="form-group">
@@ -186,7 +212,9 @@ export const CreateReservation = () => {
                             {reservations.map((item) => (
                                 <tr key={item._id}>
                                     <td onClick={() => handleCellClick(item.room)}>{item.room}</td>
-                                    <td onClick={() => handleCellClick(item.user)}>{item.user}</td>
+                                    <td onClick={() => handleCellClick(getUserNameById(item.user._id))}>
+                                        {getUserNameById(item.user)}
+                                    </td>
                                     <td onClick={() => handleCellClick(item.numberAdults)}>{item.numberAdults}</td>
                                     <td onClick={() => handleCellClick(item.numberKids)}>{item.numberKids}</td>
                                     <td onClick={() => handleCellClick(item.numberRooms)}>{item.numberRooms}</td>

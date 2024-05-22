@@ -15,13 +15,14 @@ export const useReservationAdmin = () => {
                 res.error?.response?.data?.message || 'Error getting reservations'
             );
         } else {
-            setReservations(res.data.reservation);
+            setReservations(res.data.reservations);
         }
     };
 
     const addReservation = async (reservation) => {
         setIsLoading(true);
         const res = await saveReservationRequest(reservation);
+        console.log(res)
         setIsLoading(false);
         if (res.err) {
             toast.error(

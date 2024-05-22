@@ -26,11 +26,11 @@ const reservationSchema = Schema({
         required: true
     },
     dateIn: {
-        type: Date,
+        type: String,
         required: true
     },
     dateOut: {
-        type: Date,
+        type: String,
         required: true
     },
     services: [{

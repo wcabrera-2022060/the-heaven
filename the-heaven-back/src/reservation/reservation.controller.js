@@ -20,7 +20,7 @@ export const createReservation = async (req, res) => {
         await reservation.populate(populateQuery)
         return res.send({ message: 'Reservation saved successfully', reservation })
     } catch (error) {
-        return res.status(500).send({ message: 'Error saving Reservation' })
+        console.log(error)
     }
 }
 
