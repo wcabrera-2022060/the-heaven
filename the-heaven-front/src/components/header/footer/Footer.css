@@ -1,0 +1,86 @@
+.footer {
+    padding: 20px 96px;
+    background: #000;
+    color: #f4f4f4;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.titleF {
+    font-size: 80px;
+    font-family: 'NewYorkCity';
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info i {
+    color: #f4f4f4;
+    font-size: 32px;
+    margin-left: 16px;
+}
+
+.info i:hover {
+    color: #40a2d8;
+}
+
+.textF {
+    padding-top: 32px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.textF div {
+    display: flex;
+    flex-direction: column;
+}
+
+.textF h4 {
+    font-size: 24px;
+    padding: 16px 0 13px 0;
+}
+
+.textF a {
+    text-decoration: none;
+    color: #f4f4f4;
+    padding-bottom: 7px;
+    font-size: 17px;
+}
+
+.iF {
+    font-size: 18px;
+    width: 550px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #655d5d;
+}
+
+@media screen and (max-width: 850px) {
+    .footer {
+        padding: 20px;
+    }
+    .footer i {
+        margin: 16px 16px 0 0;
+    }
+    .textF div {
+        width: 50%;
+    }
+    .iF {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 350px;
+    }
+}

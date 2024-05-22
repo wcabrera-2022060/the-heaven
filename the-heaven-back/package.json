@@ -1,0 +1,36 @@
+{
+  "name": "the-heaven",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A centralized web application inspired by Trivago for hotel management, offering comprehensive functionalities for hotel, room, and event management.",
+  "author": "Bug Busters",
+  "main": "index.js",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcabrera-2022060/the-heaven.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wcabrera-2022060/the-heaven/issues"
+  },
+  "homepage": "https://github.com/wcabrera-2022060/the-heaven#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

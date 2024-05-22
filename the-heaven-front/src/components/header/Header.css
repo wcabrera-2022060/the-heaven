@@ -1,0 +1,142 @@
+.header {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.header-text h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 800;
+    background: #f4f4f4;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-text p {
+    text-align: center;
+    font-size: 36px;
+    color: #f4f4f4;
+    padding: 8px 0 32px 0;
+}
+
+.headerSearch {
+    height: 50px;
+    background: #f4f4f4;
+    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1024px;
+    z-index: 100;
+}
+
+.headerSearchItem i {
+    color: #afafaf;
+}
+
+.headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerSearchInput {
+    border: none;
+    outline: none;
+    background: #f4f4f4;
+}
+
+.headerSearchText {
+    color: #afafaf;
+    cursor: pointer;
+}
+
+.date {
+    z-index: 101;
+    position: absolute;
+    top: 45px;
+}
+
+.options {
+    position: absolute;
+    top: 50px;
+    background: #f4f4f4;
+    color: #afafaf;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 101;
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #000;
+}
+
+.optionCounterButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+.optionCounterButton:disabled {
+    cursor: not-allowed;
+}
+
+button {
+    padding: 10px 16px;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: #40a2d8;
+    color: #f4f4f4;
+}
+
+button:hover {
+    background: #0b60b0;
+}
+
+@media screen and (max-width: 550px) {
+    .header-text h1 {
+        padding: 10px 20px;
+        font-size: 60px;
+    }
+    .header-text p {
+        font-size: 32px;
+        padding: 0 0 32px 0;
+    }
+}
