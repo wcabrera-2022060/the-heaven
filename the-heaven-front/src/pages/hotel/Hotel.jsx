@@ -1,14 +1,35 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Header } from '../../components/header/Header'
 import { Footer } from '../../components/header/footer/Footer'
 import { Navbar } from '../../components/navbar/Navbar'
 import './Hotel.css'
 import { LikedHotels } from '../../components/header/likedhotels/LikedHotels'
 import { Link } from 'react-router-dom'
+import { Rating } from '../../components/rating/Rating'
+import { RatingForm } from '../../components/rating/RatingForm'
 
 export const Hotel = () => {
     const [slideNumber, setSlideNumber] = useState(0)
     const [open, setOpen] = useState(false)
+    const [comments, setComments] = useState([
+        {
+            rating: 4,
+            title: 'Beautiful but missing MSI docking station promotion',
+            date: '18 de enero de 2024',
+            verifiedPurchase: true,
+            text: "I'm very pleased with the laptop overall. It could have used at least one more USB-A port so I'm going to have to invest in USB hub or docking station. After receiving the laptop I discovered that if I had ordered it from MSI directly I would have gotten a free MSI 2nd gen Docking Station for the same price as Amazon's. It would be nice if Amazon would retroactively match the MSI store's free docking station promotion.",
+            reviewer: 'Michael T',
+        },
+        {
+            rating: 1,
+            title: 'Major Flaws',
+            date: '16 de marzo de 2024',
+            verifiedPurchase: true,
+            text: "I've have bought two of these AI (2024) model for employees. Major issues. Hardware & software. Avoid. I bought 5 of the previous Prestige models (silver) with no issues at all. I guess MSI cut too many cost corners with this new one.",
+            reviewer: 'Kristopher Paulk',
+        },
+    ])
+
     const handleOpen = (i) => {
         setSlideNumber(i)
         setOpen(true)
@@ -23,6 +44,10 @@ export const Hotel = () => {
             newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1
         }
         setSlideNumber(newSlideNumber)
+    }
+
+    const addReview = (newReview) => {
+        setComments([newReview, ...comments])
     }
 
     const photosH = [
@@ -95,7 +120,7 @@ export const Hotel = () => {
 
                         <div className="hotelImag">
                             {photosH.map((photo, i) => (
-                                <div className="hotelImgWrapper">
+                                <div className="hotelImgWrapper" key={i}>
                                     <img
                                         onClick={() => handleOpen(i)}
                                         src={photo.src}
@@ -194,6 +219,13 @@ export const Hotel = () => {
                                 <button>Reserve or book Now</button>
                             </div>
                         </div>
+                    </div>
+                    <h1 className="others com">Comments</h1>
+                    <div className="commentsSection">
+                        <RatingForm addReview={addReview} />
+                        {comments.map((review, index) => (
+                            <Rating key={index} {...review} />
+                        ))}
                     </div>
                     <div>
                         <h1 className="others">

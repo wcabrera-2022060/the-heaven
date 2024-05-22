@@ -6,10 +6,10 @@ import { validateRoleAdmin, validateToken } from '../../middlewares/validateToke
 
 const api = Router()
 
-api.post('/createService', [validateToken, validateRoleAdmin], createService)
-api.get('/getServices', [validateToken], getServices)
-api.post('/getService/:id', [validateToken], getService)
-api.put('/updateService/:id', [validateToken, validateRoleAdmin], updateService)
-api.delete('/deleteService/:id', [validateToken, validateRoleAdmin], deleteService)
+api.post('/createService', /* [validateToken, validateRoleAdmin], */ createService)
+api.get('/getServices', /* [validateToken], */ getServices)
+api.post('/getService/:id',/*  [validateToken], */ getService)
+api.put('/updateService/:id', /* [validateToken, validateRoleAdmin], */ updateService)
+api.delete('/deleteService/:id', /* [validateToken, validateRoleAdmin], */ deleteService)
 
 export default api

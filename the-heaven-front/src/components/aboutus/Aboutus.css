@@ -1,28 +1,38 @@
 .aboutVid {
     width: 100%;
-    height: 95vh;
+    height: 90vh;
     position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .about-text {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    text-align: center;
 }
 
 .about-text h1 {
-    text-align: center;
     font-size: 80px;
     font-weight: 800;
-    background: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #cccccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .about-us-container {
-    padding-top: 54px;
     background-color: #ffffff;
     color: #000000;
     font-family: Arial, sans-serif;
@@ -32,127 +42,17 @@
     margin-top: 50px;
 }
 
-.about-us-header {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 25px;
-}
-
-.about-us-header h2 {
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-}
-
-.feature {
-    text-align: center;
-    max-width: 300px;
-}
-
-.feature img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.code-search,
-.search-syntax,
-.code-view,
-.file-browser {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.code-search h2 {
-    text-align: center;
-    font-size: 20px;
-}
-
-.code-search-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.code-search-content p {
-    flex: 1;
-    text-align: center;
-    margin-right: 20px;
-}
-
-.code-search-content img {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-}
-
-.syntax-examples {
-    display: flex;
-    justify-content: space-around;
-}
-
-.syntax-example {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 300px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-.code-search img {
-    width: 150px;
-}
-
-.testimonials {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-}
-
-blockquote {
-    background-color: #303030;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 400px;
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 10px;
-    font-style: normal;
-    color: #cccccc;
-}
-
-.cta {
+.about-section {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.cta button {
-    background-color: #303030;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+.about-section h2 {
+    font-size: 49px;
+    margin-bottom: 20px;
 }
 
-.faq {
-    margin-bottom: 40px;
-}
-
-.faq details {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
 }

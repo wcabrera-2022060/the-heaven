@@ -6,10 +6,10 @@ import { validateRoleAdmin, validateToken } from '../../middlewares/validateToke
 
 const api = Router()
 
-api.post('/createRoom', [validateToken, validateRoleAdmin], createRoom)
-api.get('/getRooms', [validateToken], getRooms)
-api.post('/getRoom/:id', [validateToken], getRoom)
-api.put('/updateRoom/:id', [validateToken, validateRoleAdmin], updateRoom)
-api.delete('/deleteRoom/:id', [validateToken, validateRoleAdmin], deleteRoom)
+api.post('/createRoom', /* [validateToken, validateRoleAdmin], */ createRoom)
+api.get('/getRooms', /* [validateToken], */ getRooms)
+api.post('/getRoom/:id', /* [validateToken], */ getRoom)
+api.put('/updateRoom/:id', /* [validateToken, validateRoleAdmin], */ updateRoom)
+api.delete('/deleteRoom/:id', /* [validateToken, validateRoleAdmin], */ deleteRoom)
 
 export default api
