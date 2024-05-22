@@ -1,0 +1,224 @@
+.hotelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.hotelWrapper {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.reserve {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    padding: 15px 20px;
+}
+
+.hotelTitle {
+    font-size: 50px;
+}
+
+.hotelAddress {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hotelDistance {
+    color: #0071c2;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.hotelImag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hotelImgWrapper {
+    width: 33%;
+}
+
+.hotelImg {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.hotelDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hotelDetailsTexts {
+    flex: 3;
+    font-size: 14px;
+}
+
+.hotelDesc {
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: justify;
+    padding-right: 40px;
+    font-weight: 400;
+}
+
+.hotelDetailsH {
+    flex: 1;
+    max-width: 400px;
+    height: 490px;
+    background: #e9e8e8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.hotelDetailsH > h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #403d3d;
+}
+
+.hotelDetailsH > span {
+    font-size: 14px;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+}
+
+.hotelDetailsH > button {
+    padding: 15px 20px;
+}
+
+.detailsText {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.detailsSection {
+    margin-bottom: 10px;
+}
+
+.detailsSection > h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.detailsList {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.slider {
+    position: fixed;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliderWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderImg {
+    width: 60%;
+    height: 70%;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 40px;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.arrow {
+    margin: 20px;
+    font-size: 50px;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.others {
+    padding-top: 65px;
+    font-size: 32px;
+}
+
+/* Review.css */
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-rating {
+    color: #ffa41c;
+}
+
+.review-title {
+    font-weight: bold;
+}
+
+.review-date {
+    color: #555;
+    margin-top: 5px;
+}
+
+.verified-purchase {
+    color: #007600;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.review-text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.reviewer-name {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.com {
+    padding-bottom: 35px;
+}

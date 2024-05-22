@@ -1,0 +1,158 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0b60b0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.collapsed {
+    width: 80px;
+}
+
+.logo {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.logo span {
+    font-family: 'NewYorkCity';
+    font-size: 48px;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.collapsed .logo span {
+    font-size: 48px;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.menu {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    background-color: #40a2d8;
+}
+
+.menuItem i {
+    font-size: 24px;
+    margin: 0 15px;
+}
+
+.menuItem .text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.collapsed .menuItem .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.menuItem .tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9f9f9f;
+    color: #fff;
+    padding: 13px;
+    border-radius: 0 5px 5px 0;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.collapsed .menuItem:hover .tooltip {
+    opacity: 1;
+}
+
+.profile {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    height: 45px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.profileItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile i {
+    font-size: 24px;
+    margin: 0 15px;
+}
+
+.profile .text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.collapsed .profile .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.profile .tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9f9f9f;
+    color: #fff;
+    padding: 13px;
+    border-radius: 0 5px 5px 0;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.profile:hover {
+    background-color: #40a2d8;
+}
+
+.collapsed .profile:hover .tooltip {
+    opacity: 1;
+}

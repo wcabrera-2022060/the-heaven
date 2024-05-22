@@ -1,3 +1,8 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
 .wrapper {
     position: relative;
     width: 370px;
@@ -6,7 +11,9 @@
     border-radius: 10px;
     color: #000;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: height 0.2s ease;
     overflow: hidden;
     z-index: 100;
@@ -23,12 +30,12 @@
 
 .wrapper.active .form-box.login {
     transition: none;
-    translate: -400px;
+    transform: translateX(-400px);
 }
 
 .wrapper .form-box.login {
-    transition: translate 0.18s ease;
-    translate: 0;
+    transition: transform 0.18s ease;
+    transform: translateX(0);
 }
 
 form h1 {
@@ -64,7 +71,7 @@ form .input-box {
     position: absolute;
     right: 20px;
     top: 50%;
-    translate: 0 -50%;
+    transform: translateY(-50%);
     font-size: 16px;
 }
 
@@ -102,6 +109,8 @@ form button {
     font-weight: 700;
 }
 
+/*Registered*/
+
 form .register-link {
     font-size: 14.5px;
     text-align: center;
@@ -118,17 +127,80 @@ form .register-link {
     text-decoration: underline;
 }
 
-/***********/
-/*Register*/
-/**********/
-
 .wrapper.active .form-box.register {
-    transition: translate 0.18s ease;
-    translate: 0;
+    transition: transform 0.18s ease;
+    transform: translateX(0);
 }
 
 .wrapper .form-box.register {
     position: absolute;
     transition: none;
-    translate: 400px;
+    transform: translateX(400px);
+}
+
+form .input-box2 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.input-box2 input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box2 input::placeholder {
+    color: #6e6a6a;
+}
+
+.input-box2 .icons {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+form .remember-forgot2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 15px 0 15px;
+}
+
+.remember-forgot2 label input {
+    accent-color: #000;
+    margin-right: 4px;
+}
+
+.remember-forgot2 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.remember-forgot2 a:hover {
+    text-decoration: underline;
+}
+
+.Ad-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e32121;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
 }

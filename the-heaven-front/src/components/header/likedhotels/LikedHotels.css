@@ -1,0 +1,148 @@
+.outstanding {
+    margin: 0 96px;
+    color: #000;
+    z-index: 10;
+}
+
+.outstanding h1 {
+    font-size: 48px;
+}
+
+.hotelcard {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.i-card {
+    width: calc(60%-10px);
+    text-align: start;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f4f4f4;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.i-card h4 {
+    font-size: 25px;
+    padding: 15px 0 20px 0;
+}
+.i-card p {
+    font-size: 15px;
+    padding: 0 0 12px 0;
+}
+
+.i-image {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.i-image img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+.i-image:hover img {
+    transform: scale(1.1);
+}
+
+.btnC {
+    padding: 10px 16px;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: #0b60b0;
+    color: #f4f4f4;
+}
+
+.btnC:hover {
+    background-color: #40a2d8;
+}
+
+.i-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-details {
+    flex-grow: 1;
+}
+
+.right-details {
+    text-align: right;
+    margin-top: 170px;
+}
+
+.right-details p {
+    font-size: 20px;
+    font-weight: bold;
+}
+.fa-star {
+    padding-left: 5px;
+    color: #ffd700;
+}
+
+@media screen and (max-width: 850px) {
+    .outstanding {
+        margin: 64px 32px;
+        color: #000;
+    }
+    .hotelcard {
+        flex-direction: column;
+    }
+    .i-card {
+        width: 95%;
+        margin-right: 5px;
+    }
+}
+
+/* Agrega estos estilos al final de tu archivo CSS */
+.carousel-container {
+    width: 100% !important; /* Cambia el ancho según sea necesario */
+    margin: 0 auto; /* Centramos el carrusel horizontalmente */
+}
+
+/* Estilos para el Slider */
+.slick-slider {
+    margin: 30px 0 50px !important;
+    width: 100% !important;
+}
+
+/* Estilos para los botones de navegación del Slider */
+.slick-prev,
+.slick-next {
+    top: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    background: #0b60b0 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    border-top: 2px solid #0b60b0 !important;
+    z-index: 1 !important;
+}
+/* Estilos para los puntos de navegación del Slider */
+.slick-dots {
+    margin: -55px 0 !important;
+    bottom: 20px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 15px !important;
+    color: #40a2d8 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #40a2d8 !important;
+}
