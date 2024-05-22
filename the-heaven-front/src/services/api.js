@@ -233,3 +233,102 @@ export const deleteServiceRequest = async (id) => {
     }
   }
 }
+
+
+//CRUD EVENT
+//agregar
+export const saveEventRequest = async (event) => {
+  try {
+    return await apiUrl.post('/createEvent', event)
+  } catch (error) {
+    return {
+      error: true,
+      error
+    }
+  }
+}
+
+//listar
+export const getEventsRequest = async () => {
+  try {
+    return await apiUrl.get('getEvents')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateEventRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateEvent/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteEventRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteEvent/${id}`)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//CRUD RESERVATION
+//agregar
+export const saveReservationRequest = async (reservation) => {
+  try {
+    return await apiUrl.post('/createReservation', reservation)
+  } catch (error) {
+    return {
+      error: true,
+      error
+    }
+  }
+}
+
+//listar
+export const getReservationsRequest = async () => {
+  try {
+    return await apiUrl.get('getReservations')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateReservationRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateReservation/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteReservationRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteReservation/${id}`)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}

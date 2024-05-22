@@ -6,10 +6,10 @@ import { createEvent, deleteEvent, getEvent, getEvents, updateEvent } from './ev
 
 const api = Router()
 
-api.post('/createEvent', [validateToken, validateRoleAdmin], createEvent)
-api.get('/getEvents', [validateToken, validateRoleAdmin], getEvents)
-api.post('/getEvent/:id', [validateToken, validateRoleAdmin], getEvent)
-api.put('/updateEvent/:id', [validateToken, validateRoleAdmin], updateEvent)
-api.delete('/deleteEvent/:id', [validateToken, validateRoleAdmin], deleteEvent)
+api.post('/createEvent',/*  [validateToken, validateRoleAdmin], */ createEvent)
+api.get('/getEvents', /* [validateToken, validateRoleAdmin], */ getEvents)
+api.post('/getEvent/:id', /* [validateToken, validateRoleAdmin], */ getEvent)
+api.put('/updateEvent/:id', /* [validateToken, validateRoleAdmin], */ updateEvent)
+api.delete('/deleteEvent/:id', /* [validateToken, validateRoleAdmin], */ deleteEvent)
 
 export default api

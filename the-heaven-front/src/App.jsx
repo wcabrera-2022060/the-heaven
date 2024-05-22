@@ -11,6 +11,8 @@ import { CreateHotel } from './components/hotel/CreateHotel.jsx'
 import { CreateRoom } from './components/room/CreateRoom.jsx'
 import { CreateUser } from './components/user/CreateUser.jsx'
 import { CreateService } from './components/service/CreateService.jsx'
+import { CreateEvent } from './components/event/CreateEvent.jsx'
+import { CreateReservation } from './components/reservationAdmin/CreateReservation.jsx'
 import { ListH } from './pages/list/ListH.jsx'
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
         <Route path='createRoom' element={<CreateRoom />} />
         <Route path='createUser' element={<CreateUser />} />
         <Route path='createService' element={<CreateService />} />
+        <Route path='createEvent' element={<CreateEvent />} />
+        <Route path='createReservation' element={<CreateReservation />} />
       </Routes>
       <Toaster position="top-center" reverseOrder={false} />
     </div>
