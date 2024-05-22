@@ -1,0 +1,245 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.table-container {
+    padding: 16px;
+    background: #2c6597;
+    color: #fff;
+    border-radius: 8px;
+    width: 1000px;
+    overflow-x: auto;
+    margin-top: 110px;
+}
+
+.table-controls {
+    margin-bottom: 16px;
+}
+
+.table-controls label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.rows-per-page-select {
+    background: #1c8ffb;
+    color: #fff;
+    border: 1px solid #40a2d8;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rows-per-page-select:focus {
+    outline: none;
+    border-color: #40a2d8;
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.reservation-table th,
+.reservation-table td {
+    padding: 15px 30px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.reservation-table th {
+    background: #3393cb;
+    font-weight: bold;
+}
+
+.reservation-table th .sort-icon {
+    visibility: hidden;
+    margin-left: 8px;
+}
+
+.reservation-table th:hover .sort-icon {
+    visibility: visible;
+}
+
+.reservation-table tr {
+    font-size: 16px;
+}
+
+.reservation-table tr:nth-child(even) {
+    background: #527a9a;
+}
+
+.reservation-table tr:nth-child(odd) {
+    background: #89b6c3;
+}
+
+.reservation-table tr:hover {
+    background: #0283cd;
+}
+
+.reservation-table th,
+.reservation-table td {
+    border: 1px solid #888;
+}
+
+.edit-button,
+.delete-button {
+    background: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background: #f44336;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.pagination-button {
+    background: #0794c3;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagination-button:hover {
+    background: #077bc3;
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    color: #fff;
+}
+
+.formR-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formRe-form {
+    float: left;
+    background: #fff;
+    border: 1px solid #dedede;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: flex-start;
+    width: 400px;
+    height: 500px;
+    padding: 30px 50px;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-left: 50px;
+    height: 50%;
+}
+
+.formRe-form {
+    margin-top: 110px;
+    margin-right: 20px;
+}
+
+input {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+.formRe-form button {
+    width: 100%;
+    height: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #9f9fa4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0;
+}
+
+.formRe-form button:hover {
+    background-color: #269dc8;
+}
+
+.edit-button,
+.delete-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    background: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background: #f44336;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}

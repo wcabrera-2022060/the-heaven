@@ -64,6 +64,17 @@ export const NavbarA = () => {
                         <span className="text">Event</span>
                         <span className="tooltip">Event</span>
                     </Link>
+
+                    <Link
+                        to="/serviceA"
+                        className="menuItem"
+                        onClick={toggleMenu}
+                    >
+                        <i className="fa-solid fa-key"></i>
+                        <span className="text">Service</span>
+                        <span className="tooltip">Service</span>
+                    </Link>
+
                 </div>
                 <div className="profile">
                     <Link to="/" className="profileItem" onClick={toggleMenu}>

@@ -11,6 +11,8 @@ import { Aboutus } from './components/aboutus/Aboutus'
 import { ReservationA } from './components/admin/reservationA/ReservationA'
 import { CreateHotel } from './components/admin/hotelA/CreateHotel.jsx'
 import { CreateRoom } from './components/admin/roomA/CreateRoom.jsx'
+import { CreateUser } from './components/admin/userA/CreateUser.jsx'
+import { CreateService } from './components/admin/serviceA/CreateService.jsx'
 
 function App() {
     return (
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/reservationA" element={<ReservationA />}></Route>
                 <Route path="/hotelA" element={<CreateHotel />}></Route>
                 <Route path="/roomA" element={<CreateRoom />}></Route>
+                <Route path="/userA" element={<CreateUser />}></Route>
+                <Route path="/serviceA" element={<CreateService />}></Route>
             </Routes>
             <Toaster position="top-center" reverseOrder={false} />
         </div>
