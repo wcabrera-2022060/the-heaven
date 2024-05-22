@@ -10,6 +10,7 @@ import { Hotel } from './pages/hotel/Hotel.jsx'
 import { CreateHotel } from './components/hotel/CreateHotel.jsx'
 import { CreateRoom } from './components/room/CreateRoom.jsx'
 import { CreateUser } from './components/user/CreateUser.jsx'
+import { CreateService } from './components/service/CreateService.jsx'
 import { ListH } from './pages/list/ListH.jsx'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='createHotel' element={<CreateHotel />} />
         <Route path='createRoom' element={<CreateRoom />} />
         <Route path='createUser' element={<CreateUser />} />
+        <Route path='createService' element={<CreateService />} />
       </Routes>
       <Toaster position="top-center" reverseOrder={false} />
     </div>
