@@ -13,6 +13,7 @@ import ratingRoutes from '../src/rating/rating.routes.js'
 import reservationRoutes from '../src/reservation/reservation.routes.js'
 import eventRoutes from '../src/event/event.routes.js'
 import serviceRoutes from '../src/service/services.routes.js'
+import invoiceRoutes from '../src/invoice/invoice.routes.js'
 
 const app = express()
 config()
@@ -32,6 +33,7 @@ app.use(ratingRoutes)
 app.use(reservationRoutes)
 app.use(eventRoutes)
 app.use(serviceRoutes)
+app.use(invoiceRoutes)
 
 export const initServer = () => {
     app.listen(port, () => { console.log(`Server listen in port ${port}`) })
