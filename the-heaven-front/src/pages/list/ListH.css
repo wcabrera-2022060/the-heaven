@@ -1,0 +1,103 @@
+.listHContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.listHWrapper {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    gap: 20px;
+}
+
+.listHSearch {
+    flex: 1;
+    background: #e9e8e8;
+    padding: 25px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.title {
+    font-size: 48px;
+    color: #403d3d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.listItem > label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.listItem > input {
+    height: 45px;
+    border: none;
+    padding: 5px;
+}
+
+.listItem > span {
+    height: 45px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lstOp {
+    padding: 10px;
+}
+
+.listOpItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #403d3d;
+    font-size: 16px;
+}
+
+.listOpInput {
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+}
+
+.listHSearch > button {
+    font-size: 25px;
+    padding: 10px;
+    background: #40a2d8;
+    color: #f4f4f4;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.listHResult {
+    flex: 3;
+}
+
+.moreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreContainer > button {
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+}
