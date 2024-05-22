@@ -94,3 +94,66 @@ export const deleteUser = async (req, res) => {
         return res.status(500).send({ message: 'Error deleting user' })
     }
 }
+
+export const adminDefault = async () => {
+    try {
+        const users = await User.find({})
+        if (users.length === 0) {
+            const data = {
+                name: 'josúe',
+                surname: 'noj',
+                username: 'jnoj',
+                email: 'jnoj@kinal.edu.gt',
+                password: '123456',
+                role: 'ADMIN'
+            }
+            const user = new User(data)
+            await user.save()
+            console.log('Admin created successfully')
+        }
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export const changeRoleAdmin = async (req, res) => {
+    const { id } = req.params
+    const { _id } = req.user
+    const user = await User.findById({ _id })
+    if (!user) return res.status(404).send({ message: 'User not found' })
+    if (user.username === 'jnoj') {
+        const newAdmin = await User.findByIdAndUpdate({ _id: id }, { role: 'ADMIN' }, { new: true })
+        if (!newAdmin) return res.status(404).send({ message: 'User not found not updated' })
+        return res.send({ message: 'User updated role admin successfully', newAdmin })
+    }
+}
+
+export const updateUserAdmin = async (req, res) => {
+    try {
+        const { id } = req.params
+        const data = req.body
+        const user = await User.findById({ _id: id })
+        if (!user) return res.status(404).send({ message: 'User not found' })
+        if (user.role === 'ADMIN') return res.status(403).send({ message: 'You do not have permission to update this user' })
+        const userUpdated = await User.findByIdAndUpdate({ _id: id }, data, { new: true })
+        if (!userUpdated) return res.status(404).send({ message: 'User not found not updated' })
+        return res.send({ message: 'User updated successfully', userUpdated })
+    } catch (error) {
+        /* return res.status(500).send({ message: 'Error updating user' }) */
+        console.error(error)
+    }
+}
+
+export const deleteUserAdmin = async (req, res) => {
+    try {
+        const { id } = req.params
+        const user = await User.findById({ _id: id })
+        if (!user) return res.status(404).send({ message: 'User not found' })
+        if (user.role === 'ADMIN') return res.status(403).send({ message: 'You do not have permission to delete this user' })
+        const userDeleted = await User.findByIdAndDelete({ _id: id })
+        if (!userDeleted) return res.status(404).send({ message: 'User not found not deleted' })
+        return res.send({ message: 'User deleted successfully', userDeleted })
+    } catch (error) {
+        return res.status(500).send({ message: 'Error deleting user' })
+    }
+}

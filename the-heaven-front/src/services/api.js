@@ -135,3 +135,52 @@ export const deleteRoomRequest = async (id) => {
     }
   }
 }
+
+//CRUD USUARIO
+//agregar
+export const saveUserRequest = async (user) => {
+  try {
+    return await apiUrl.post('/createUser', user)
+  } catch (error) {
+    return {
+      error: true,
+      err
+    }
+  }
+}
+
+//listar
+export const getUsersRequest = async () => {
+  try {
+    return await apiUrl.get('getUsers')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateUserRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateUserAdmin/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteUserRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteUserAdmin/${id}`)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
