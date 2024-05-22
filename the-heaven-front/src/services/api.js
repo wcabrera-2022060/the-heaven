@@ -86,3 +86,52 @@ export const deleteHotelRequest = async (id) => {
     }
   }
 }
+
+///CRUD ROOM
+//agregar
+export const saveRoomRequest = async (room) => {
+  try {
+    return await apiUrl.post('/createRoom', room)
+  } catch (error) {
+    return {
+      error: true,
+      err
+    }
+  }
+}
+
+//listar
+export const getRoomsRequest = async () => {
+  try {
+    return await apiUrl.get('getRooms')
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//actuailzar
+export const updateRoomRequest = async (data, id) => {
+  try {
+    return await apiUrl.put(`updateRoom/${id}`, data)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}
+
+//eliminar
+export const deleteRoomRequest = async (id) => {
+  try {
+    return await apiUrl.delete(`deleteRoom/${id}`)
+  } catch (error) {
+    return {
+      err: true,
+      error
+    }
+  }
+}

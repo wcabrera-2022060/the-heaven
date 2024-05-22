@@ -112,6 +112,18 @@ export const CreateHotel = () => {
     setIsModalOpen(true);
   };
 
+  const handleCancel = () => {
+    setHotel({
+      name: '',
+      country: '',
+      city: '',
+      address: '',
+      phone: '',
+      description: ''
+    });
+    setIsEditing(false);
+  };
+
   return (
     <>
       <Navbar />
@@ -147,8 +159,10 @@ export const CreateHotel = () => {
               <label>Description</label>
               <input type="text" value={hotel.description} onChange={(e) => setHotel({ ...hotel, description: e.target.value })} required />
             </div>
-
+            <br />
             <button type="submit">{isEditing ? 'Update Hotel' : 'Add Hotel'}</button>
+            <br />
+            <button type="button" onClick={handleCancel}>Cancel</button>
           </form>
         </div>
         <div className="table-container">

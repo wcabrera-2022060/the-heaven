@@ -8,9 +8,10 @@ import { LoginRegister } from './pages/LoginRegistration/LoginRegister.jsx'
 import { Home } from './pages/home/Home.jsx'
 import { Hotel } from './pages/hotel/Hotel.jsx'
 import { CreateHotel } from './components/hotel/CreateHotel.jsx'
+import { CreateRoom } from './components/room/CreateRoom.jsx'
 import { ListH } from './pages/list/ListH.jsx'
 
-function App () {
+function App() {
   return (
     <div>
       <Routes>
@@ -28,6 +29,7 @@ function App () {
           }
         />
         <Route path='createHotel' element={<CreateHotel />} />
+        <Route path='createRoom' element={<CreateRoom />} />
       </Routes>
       <Toaster position="top-center" reverseOrder={false} />
     </div>
